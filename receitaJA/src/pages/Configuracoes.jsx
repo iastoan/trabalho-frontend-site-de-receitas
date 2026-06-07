@@ -78,7 +78,7 @@ export default function Configuracoes() {
         { merge: true } // Evita apagar outros campos caso existam no documento
       );
 
-      alert("Perfil salvo com sucesso! 🎉");
+      alert("Perfil salvo com sucesso!");
     } catch (error) {
       console.error(error);
       alert("Erro ao salvar perfil.");
@@ -138,7 +138,7 @@ export default function Configuracoes() {
               style={{ width: "18px", height: "18px", cursor: "pointer" }}
             />
             <label htmlFor="modoEscuroToggle" style={{ cursor: "pointer", fontWeight: "600" }}>
-              Ativar Modo Escuro 🌙
+              Ativar Modo Escuro 
             </label>
           </div>
 

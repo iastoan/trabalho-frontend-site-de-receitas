@@ -35,7 +35,7 @@ export default function Favoritos() {
 
   return (
     <div className="home-container">
-      <h1>❤️ Meus Favoritos</h1>
+      <h1>Meus Favoritos</h1>
 
       {favoritos.length === 0 ? (
         <p style={{ textAlign: "center", color: "#666", marginTop: "20px" }}>
@@ -65,7 +65,7 @@ export default function Favoritos() {
                 <h3>{favorito.titulo}</h3>
 
                 <p>
-                  <strong>📁 Categoria:</strong> {favorito.categoria}
+                  <strong>Categoria:</strong> {favorito.categoria}
                 </p>
 
                 <p>

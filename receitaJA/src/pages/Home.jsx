@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <h1>🍲 ReceitaJá</h1>
+      <h1>ReceitaJá</h1>
 
       {/* SEARCH STYLE NETFLIX */}
       <div className="search-container">
@@ -51,12 +51,12 @@ export default function Home() {
         />
       </div>
 
-      <h2>🔥 Receitas em Destaque</h2>
+      <h2>Receitas em Destaque</h2>
 
       {loading && <p>Carregando receitas...</p>}
 
       {!loading && receitasFiltradas.length === 0 && (
-        <p>Nenhuma receita encontrada 😢</p>
+        <p>Nenhuma receita encontrada ;-;</p>
       )}
 
       <div className="receitas-grid">

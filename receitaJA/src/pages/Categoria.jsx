@@ -46,12 +46,12 @@ export default function Categoria() {
 
   return (
     <div className="categoria-page">
-      <h1>📂 {nome}</h1>
+      <h1>{nome}</h1>
 
       {loading && <p>Carregando receitas...</p>}
 
       {!loading && receitas.length === 0 && (
-        <p>Nenhuma receita encontrada nessa categoria 😢</p>
+        <p>Nenhuma receita encontrada nessa categoria ;-;</p>
       )}
 
       <div className="categoria-grid">

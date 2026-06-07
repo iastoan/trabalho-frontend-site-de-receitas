@@ -93,7 +93,7 @@ export default function Perfil() {
           </div>
 
           {/* Seção das Receitas Criadas pelo Usuário */}
-          <h3 className="perfil-secao-titulo">📚 Minhas Receitas</h3>
+          <h3 className="perfil-secao-titulo">Minhas Receitas</h3>
 
           {receitasUsuario.length === 0 ? (
             <p style={{ color: "#666", margin: "20px 0" }}>Você ainda não publicou receitas.</p>
@@ -119,7 +119,7 @@ export default function Perfil() {
                     )}
 
                     <h3>{receita.titulo}</h3>
-                    <p><strong>📁 Categoria:</strong> {receita.categoria}</p>
+                    <p><strong>Categoria:</strong> {receita.categoria}</p>
                     <p><strong>⏱️ Tempo:</strong> {receita.tempo} min</p>
                   </div>
                 </Link>

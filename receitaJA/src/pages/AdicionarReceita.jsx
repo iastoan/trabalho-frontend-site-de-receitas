@@ -37,7 +37,7 @@ export default function AdicionarReceita() {
         criadoEm: new Date(),
       });
 
-      alert("Receita cadastrada com sucesso! 🍳");
+      alert("Receita cadastrada com sucesso!");
 
       setTitulo("");
       setCategoria("");

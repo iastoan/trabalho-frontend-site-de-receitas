@@ -12,7 +12,7 @@ export default function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-      alert("Login realizado com sucesso! 🔓");
+      alert("Login realizado com sucesso!");
     } catch (error) {
       alert("Erro: " + error.message);
     }
@@ -20,7 +20,7 @@ export default function Login() {
 
   return (
     <div className="form-container" style={{ marginTop: "60px" }}>
-      <h1>🔐 Conecte-se</h1>
+      <h1>Conecte-se</h1>
 
       <form onSubmit={handleLogin} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         

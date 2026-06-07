@@ -38,7 +38,7 @@ export default function ReceitasCategoria() {
 
   return (
     <div className="categoria-container">
-      <h1>📂 {categoria}</h1>
+      <h1>{categoria}</h1>
 
       {receitas.length === 0 ? (
         <p>Nenhuma receita encontrada.</p>

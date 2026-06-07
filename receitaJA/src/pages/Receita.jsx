@@ -101,7 +101,7 @@ export default function Receita() {
 
     try {
       await deleteDoc(doc(db, "receitas", id));
-      alert("Receita excluída com sucesso! 🗑️");
+      alert("Receita excluída com sucesso!");
       navigate("/"); 
     } catch (error) {
       console.error(error);
@@ -131,7 +131,7 @@ export default function Receita() {
 
       <div className="receita-meta">
         <p>
-          <strong>📁 Categoria:</strong> {receita.categoria}
+          <strong>Categoria:</strong> {receita.categoria}
         </p>
         <p>
           <strong>⏱️ Tempo:</strong> {receita.tempo} min
@@ -154,7 +154,7 @@ export default function Receita() {
 
         {ehDono && (
           <button onClick={excluirReceita} className="btn-excluir">
-            🗑️ Excluir Receita
+            Excluir Receita
           </button>
         )}
       </div>

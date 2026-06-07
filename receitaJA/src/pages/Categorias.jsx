@@ -18,42 +18,42 @@ export default function Categorias() {
         <Link to="/categoria/Massas">
           <div className="categoria">
             <img src={massasImg} alt="Massas" />
-            <h3>🍝 Massas</h3>
+            <h3>Massas</h3>
           </div>
         </Link>
 
         <Link to="/categoria/Doces">
           <div className="categoria">
             <img src={docesImg} alt="Doces e Sobremesas" />
-            <h3>🍰 Doces e Sobremesas</h3>
+            <h3>Doces e Sobremesas</h3>
           </div>
         </Link>
 
         <Link to="/categoria/Fitness">
           <div className="categoria">
             <img src={fitnessImg} alt="Fitness" />
-            <h3>💪 Fitness</h3>
+            <h3>Fitness</h3>
           </div>
         </Link>
 
         <Link to="/categoria/Bebidas">
           <div className="categoria">
             <img src={bebidasImg} alt="Bebidas" />
-            <h3>🥤 Bebidas</h3>
+            <h3>Bebidas</h3>
           </div>
         </Link>
 
         <Link to="/categoria/Carnes">
           <div className="categoria">
             <img src={carnesImg} alt="Carnes" />
-            <h3>🥩 Carnes</h3>
+            <h3>Carnes</h3>
           </div>
         </Link>
 
         <Link to="/categoria/Lanches">
           <div className="categoria">
             <img src={lanchesImg} alt="Lanches" />
-            <h3>🥪 Lanches</h3>
+            <h3>Lanches</h3>
           </div>
         </Link>
 

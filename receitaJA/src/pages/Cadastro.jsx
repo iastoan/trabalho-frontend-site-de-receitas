@@ -12,7 +12,7 @@ export default function Cadastro() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, senha);
-      alert("Conta criada com sucesso! 🎉");
+      alert("Conta criada com sucesso!");
     } catch (error) {
       alert("Erro: " + error.message);
     }
