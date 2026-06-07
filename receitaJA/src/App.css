@@ -1,0 +1,584 @@
+/* ==========================================================================
+   1. BASE MODERNA GLOBAL & TRAVA ANTIBAGUNÇA DEFINITIVA
+   ========================================================================== */
+
+/* Reseta e impede que QUALQUER elemento jogue a tela para a direita */
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important; /* Arranca fora o espaço branco da direita */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f7f7fb, #eef1f6);
+  color: #222;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   2. NAVEGAÇÃO (NAVBAR LARANJA)
+   ========================================================================== */
+
+nav {
+  background: linear-gradient(90deg, #ff6b35, #ff8a5b);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   3. BARRA DE PESQUISA (SEARCH BAR)
+   ========================================================================== */
+
+.search-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  color: #000;
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.35);
+}
+
+/* ==========================================================================
+   4. SISTEMA DE GRIDS (LADO A LADO NO PC)
+   ========================================================================== */
+
+.receitas-grid,
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* ==========================================================================
+   5. CARDS DE RECEITAS
+   ========================================================================== */
+
+.card-receita {
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.card-receita:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-imagem {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-receita h3,
+.card-receita h4 {
+  padding: 15px 15px 5px 15px;
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.card-receita p {
+  padding: 0 15px 12px 15px;
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   6. CARDS DE CATEGORIAS
+   ========================================================================== */
+
+.categoria {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.categoria:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 107, 53, 0.15);
+}
+
+.categoria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.categoria h3 {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+/* ==========================================================================
+   7. PÁGINA DE PERFIL DO USUÁRIO
+   ========================================================================== */
+
+.perfil-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.perfil-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #eef1f6;
+  padding-bottom: 30px;
+}
+
+.avatar-padrao {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  margin: 0 auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-info h2 {
+  margin: 10px 0 5px 0;
+  font-size: 26px;
+  color: #222;
+}
+
+.perfil-bio {
+  color: #666;
+  font-style: italic;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+}
+
+.perfil-status {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background: #f7f7fb;
+  padding: 12px 25px;
+  border-radius: 50px;
+}
+
+.perfil-status p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+}
+
+.perfil-secao-titulo {
+  text-align: left;
+  font-size: 22px;
+  color: #ff6b35;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff6b35;
+  padding-left: 10px;
+}
+
+/* ==========================================================================
+   8. PÁGINA INTERNA DA RECEITA
+   ========================================================================== */
+
+.receita-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.receita-container h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.receita-imagem {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 25px;
+}
+
+.receita-meta {
+  display: flex;
+  gap: 30px;
+  background: #f7f7fb;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.receita-meta p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.receita-container h2 {
+  font-size: 22px;
+  color: #ff6b35;
+  margin-bottom: 15px;
+  border-left: 4px solid #ff6b35;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.receita-descricao {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  white-space: pre-line;
+  text-align: left;
+}
+
+.botoes-container {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ==========================================================================
+   9. FORMULÁRIOS, ENTRADAS (INPUTS) E BOTÕES
+   ========================================================================== */
+
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff6b35;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: #ff5722;
+}
+
+.btn-favoritar {
+  background: #ff4757;
+}
+.btn-favoritar:hover {
+  background: #ff2e44;
+}
+
+.btn-desfavoritar {
+  background: #eccc68;
+  color: #222;
+}
+.btn-desfavoritar:hover {
+  background: #ff7f50;
+  color: white;
+}
+
+.btn-excluir {
+  background: #ff3b30;
+  margin-left: auto;
+}
+.btn-excluir:hover {
+  background: #d63031;
+}
+
+/* ==========================================================================
+   10. MODALIDADES DO MODO ESCURO (DARK MODE)
+   ========================================================================== */
+
+body.dark {
+  background: #0f1115;
+  color: #e5e5e5;
+}
+
+body.dark .form-container,
+body.dark .card-receita,
+body.dark .categoria,
+body.dark .perfil-container,
+body.dark .receita-container {
+  background: #1a1d24;
+  border: 1px solid #2a2f3a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .perfil-header {
+  border-bottom-color: #2a2f3a;
+}
+
+body.dark .perfil-info h2,
+body.dark .card-receita h3,
+body.dark .card-receita h4,
+body.dark .categoria h3,
+body.dark .receita-container h1 {
+  color: white;
+}
+
+body.dark .perfil-bio,
+body.dark .card-receita p,
+body.dark .receita-descricao {
+  color: #aaa;
+}
+
+body.dark .perfil-status,
+body.dark .receita-meta {
+  background: #14171d;
+}
+
+body.dark .perfil-status p,
+body.dark .receita-meta p {
+  color: #ddd;
+}
+
+body.dark .receita-descricao {
+  background: #14171d;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #14171d;
+  color: white;
+  border: 1px solid #2a2f3a;
+}
+
+body.dark button {
+  background: #ff6b35;
+}
+
+body.dark nav {
+  background: linear-gradient(90deg, #b84a22, #ff6b35);
+}
+
+/* ==========================================================================
+   11. CORREÇÃO ABSOLUTA DO MENU E RESPONSIVIDADE MOBILE (ATÉ 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  
+  /* Corrige o travamento mudando para static/relative e força largura total da tela */
+  nav {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important; /* Força os links a ficarem em uma única linha comprida */
+    justify-content: flex-start !important; 
+    overflow-x: auto !important; /* Libera totalmente o arrastar para o lado com o dedo */
+    gap: 25px !important;
+    padding: 15px 20px !important;
+    width: 100vw !important; /* Ocupa exatamente a largura da tela do celular */
+    margin: 0 !important;
+    -webkit-overflow-scrolling: touch !important; /* Deixa o deslizar do dedo super fluido */
+  }
+
+  /* Esconde por completo a barra cinza de rolagem horizontal */
+  nav::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+
+  /* Impede terminantemente as palavras do menu de serem comprimidas */
+  nav a {
+    flex-shrink: 0 !important;
+    font-size: 15px !important;
+    padding: 4px 6px !important;
+    display: inline-block !important;
+  }
+
+  /* Alinha as margens de todo o resto do site para respeitar o limite da tela */
+  .home-container,
+  .perfil-container,
+  .receita-container,
+  .form-container,
+  .search-container {
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 15px 12px !important;
+    padding: 15px !important;
+    border-radius: 12px;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  /* Coluna única de cards perfeitamente enquadrada */
+  .receitas-grid,
+  .categorias-grid {
+    grid-template-columns: 1fr !important; 
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
+  .card-receita {
+    max-width: 100% !important; 
+  }
+
+  .card-imagem {
+    height: 190px !important; 
+  }
+
+  .perfil-status,
+  .receita-meta {
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 15px;
+    padding: 12px;
+  }
+
+  .botoes-container {
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .btn-favoritar,
+  .btn-desfavoritar,
+  .btn-excluir {
+    width: 100% !important; 
+    justify-content: center !important;
+  }
+  
+  .btn-excluir {
+    margin-left: 0 !important; 
+  }
+}

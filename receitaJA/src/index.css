@@ -1,0 +1,360 @@
+/* ========================================================================== */
+/* 1. BASE GLOBAL */
+/* ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f7f7fb, #eef1f6);
+  color: #222;
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  margin: 25px 0;
+  letter-spacing: -0.5px;
+}
+
+/* Container padrão */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========================================================================== */
+/* 2. NAVBAR */
+/* ========================================================================== */
+
+nav {
+  background: linear-gradient(90deg, #ff6b35, #ff8a5b);
+  padding: 15px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ========================================================================== */
+/* 3. SEARCH BAR */
+/* ========================================================================== */
+
+.search-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  background: #fff;
+  color: #000;
+
+  font-size: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  transition: 0.25s;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.35);
+}
+
+/* ========================================================================== */
+/* 4. GRIDS (HOME + CATEGORIAS) */
+/* ========================================================================== */
+
+.receitas-grid,
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* ========================================================================== */
+/* 5. CARDS DE RECEITAS */
+/* ========================================================================== */
+
+.card-receita {
+  width: 100%;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.card-receita:hover {
+  transform: translateY(-6px);
+}
+
+.card-imagem {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-receita h3,
+.card-receita h4 {
+  margin: 0;
+  padding: 12px;
+}
+
+.card-receita p {
+  margin: 0;
+  padding: 0 12px 12px;
+  color: #666;
+}
+
+/* ========================================================================== */
+/* 6. CATEGORIAS */
+/* ========================================================================== */
+
+.categoria {
+  width: 100%;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+}
+
+.categoria:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.categoria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.categoria h3 {
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+}
+
+/* ========================================================================== */
+/* 7. PERFIL */
+/* ========================================================================== */
+
+.perfil-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.avatar-padrao {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  margin: 0 auto;
+}
+
+/* ========================================================================== */
+/* 8. PÁGINA RECEITA DETALHADA */
+/* ========================================================================== */
+
+.receita-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 20px;
+}
+
+.receita-imagem {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.receita-meta {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  background: #f7f7fb;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.receita-descricao {
+  line-height: 1.6;
+  color: #555;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* ========================================================================== */
+/* 9. FORMULÁRIOS E BOTÕES */
+/* ========================================================================== */
+
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff6b35;
+  color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #ff5722;
+  transform: translateY(-2px);
+}
+
+.botoes-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* ========================================================================== */
+/* 10. MODO ESCURO */
+/* ========================================================================== */
+
+body.dark {
+  background: #0f1115;
+  color: #e5e5e5;
+}
+
+body.dark .card-receita,
+body.dark .categoria,
+body.dark .perfil-container,
+body.dark .receita-container,
+body.dark .form-container {
+  background: #1a1d24;
+}
+
+body.dark .receita-meta {
+  background: #14171d;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #14171d;
+  color: white;
+  border: 1px solid #2a2f3a;
+}
+
+body.dark nav {
+  background: linear-gradient(90deg, #b84a22, #ff6b35);
+}
+
+/* ========================================================================== */
+/* 11. RESPONSIVO MOBILE */
+/* ========================================================================== */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .receita-meta {
+    flex-direction: column;
+  }
+
+  .botoes-container {
+    flex-direction: column;
+  }
+
+  .receitas-grid,
+  .categorias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .receita-container {
+    margin: 20px 10px;
+  }
+}
