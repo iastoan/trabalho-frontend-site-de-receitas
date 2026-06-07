@@ -12,4 +12,7 @@ Wanderson da Silva Santos (Front-End)
 Yan Alibio Dos Santos Ferreira (Front-End) 
 
 # Documentação
-para mais detalhes sobre o progresso do site visualiza a documentação explicando o que foi feito
+para mais detalhes sobre o progresso do site visualiza a documentação explicando o que foi feito 
+
+# Link Do Site
+https://trabalho-frontend-site-de-receitas.vercel.app/
