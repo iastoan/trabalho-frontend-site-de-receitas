@@ -1,7 +1,8 @@
-#Receitasja
+# Receitasja
+
 Esse e um site com a função de busca de receitas atraves de categoria com a adição de adiciona a propria receita para ser visto no site.
 
-#Membros e seus funções
+# Membros e seus funções
 
 Caio Emilio Lacerda do Nasciment (Teste) 
 Gabriel do Nascimento de Souza (UX/UI)
@@ -10,5 +11,5 @@ Gustavo Henrique Domingos Perei  (Back-End/Banco)
 Wanderson da Silva Santos (Front-End) 
 Yan Alibio Dos Santos Ferreira (Front-End) 
 
-#documentação
+# Documentação
 para mais detalhes sobre o progresso do site visualiza a documentação explicando o que foi feito
