@@ -20,7 +20,7 @@ export default function Cadastro() {
 
   return (
     <div className="form-container" style={{ marginTop: "60px" }}>
-      <h1>📝 Criar Conta</h1>
+      <h1>Criar Conta</h1>
 
       <form onSubmit={handleCadastro} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
         
