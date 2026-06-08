@@ -18,4 +18,5 @@ para mais detalhes sobre o progresso do site visualiza a documentação explican
 https://trabalho-frontend-site-de-receitas.vercel.app/
 
 ATENÇÃO!
-para mexer em todas as funcionalidades do site tem que faz um login antes de você mandar uma receita.
+para mexer em todas as funcionalidades do site tem que fazer o cadastro da conta antes de você mandar uma receita.
+obs: não precisa ser seu email de verdade
