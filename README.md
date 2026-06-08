@@ -16,3 +16,6 @@ para mais detalhes sobre o progresso do site visualiza a documentação explican
 
 # Link Do Site
 https://trabalho-frontend-site-de-receitas.vercel.app/
+
+ATENÇÃO!
+para mexer em todas as funcionalidades do site tem que faz um login antes de você mandar uma receita.
